@@ -1,0 +1,45 @@
+[2023-06-12T14:21:25.473+0000] {processor.py:156} INFO - Started process (PID=109) to work on /opt/airflow/dags/data_ingestion_gcs_dag.py
+[2023-06-12T14:21:25.496+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/data_ingestion_gcs_dag.py for tasks to queue
+[2023-06-12T14:21:25.497+0000] {logging_mixin.py:117} INFO - [2023-06-12T14:21:25.497+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_gcs_dag.py
+[2023-06-12T14:22:02.830+0000] {logging_mixin.py:117} INFO - [2023-06-12T14:22:02.675+0000] {timeout.py:68} ERROR - Process timed out, PID: 109
+[2023-06-12T14:22:03.031+0000] {logging_mixin.py:117} INFO - [2023-06-12T14:22:02.876+0000] {dagbag.py:330} ERROR - Failed to import: /opt/airflow/dags/data_ingestion_gcs_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 326, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion_gcs_dag.py", line 10, in <module>
+    from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateExternalTableOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 30, in <module>
+    from google.cloud.bigquery import DEFAULT_RETRY, CopyJob, ExtractJob, LoadJob, QueryJob
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/__init__.py", line 35, in <module>
+    from google.cloud.bigquery.client import Client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 61, in <module>
+    from google.cloud.bigquery_storage_v1.services.big_query_read.client import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/__init__.py", line 25, in <module>
+    from google.cloud.bigquery_storage_v1 import client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/client.py", line 26, in <module>
+    from google.cloud.bigquery_storage_v1 import reader
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/reader.py", line 30, in <module>
+    import pandas
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/string_arrow.py", line 65, in <module>
+    import pyarrow.compute as pc
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 18, in <module>
+    from pyarrow._compute import (  # noqa
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/data_ingestion_gcs_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.0/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.0/best-practices.html#reducing-dag-complexity, PID: 109
+[2023-06-12T14:22:03.095+0000] {processor.py:770} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion_gcs_dag.py
+[2023-06-12T14:22:08.538+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/data_ingestion_gcs_dag.py took 42.991 seconds
+[2023-06-12T14:22:43.208+0000] {processor.py:156} INFO - Started process (PID=146) to work on /opt/airflow/dags/data_ingestion_gcs_dag.py
+[2023-06-12T14:22:43.272+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/data_ingestion_gcs_dag.py for tasks to queue
+[2023-06-12T14:22:43.325+0000] {logging_mixin.py:117} INFO - [2023-06-12T14:22:43.323+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_gcs_dag.py

@@ -1,0 +1,27 @@
+[2023-06-16T00:09:01.420+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T23:58:36.147329+00:00 [queued]>
+[2023-06-16T00:09:01.436+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T23:58:36.147329+00:00 [queued]>
+[2023-06-16T00:09:01.437+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16T00:09:01.438+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-16T00:09:01.440+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16T00:09:01.464+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2023-06-15 23:58:36.147329+00:00
+[2023-06-16T00:09:01.482+0000] {standard_task_runner.py:55} INFO - Started process 2590 to run task
+[2023-06-16T00:09:01.493+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'format_to_parquet_task', 'manual__2023-06-15T23:58:36.147329+00:00', '--job-id', '486', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpuf069x56']
+[2023-06-16T00:09:01.507+0000] {standard_task_runner.py:83} INFO - Job 486: Subtask format_to_parquet_task
+[2023-06-16T00:09:01.639+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T23:58:36.147329+00:00 [running]> on host 5ecaba85f1b3
+[2023-06-16T00:09:01.729+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T23:58:36.147329+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T23:58:36.147329+00:00
+[2023-06-16T00:09:01.731+0000] {logging_mixin.py:137} INFO - now next iteration: holidays.csv
+[2023-06-16T00:09:01.732+0000] {logging_mixin.py:137} INFO - file path succed : holidays.csv
+[2023-06-16T00:09:01.909+0000] {logging_mixin.py:137} INFO - table succeed: holidays.csv
+[2023-06-16T00:09:01.964+0000] {logging_mixin.py:137} INFO - write succeed: holidays.csv
+[2023-06-16T00:09:01.966+0000] {logging_mixin.py:137} INFO - now next iteration: messages-demo.csv
+[2023-06-16T00:09:01.967+0000] {logging_mixin.py:137} INFO - file path succed : messages-demo.csv
+[2023-06-16T00:09:40.138+0000] {local_task_job.py:212} INFO - Task exited with return code Negsignal.SIGKILL
+[2023-06-16T00:09:40.717+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

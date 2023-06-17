@@ -1,0 +1,28 @@
+[2023-06-15T15:04:57.324+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_file manual__2023-06-15T15:04:33.146896+00:00 [queued]>
+[2023-06-15T15:04:57.345+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_file manual__2023-06-15T15:04:33.146896+00:00 [queued]>
+[2023-06-15T15:04:57.346+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:04:57.348+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T15:04:57.348+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:04:57.373+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_file> on 2023-06-15 15:04:33.146896+00:00
+[2023-06-15T15:04:57.389+0000] {standard_task_runner.py:55} INFO - Started process 25814 to run task
+[2023-06-15T15:04:57.396+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_file', 'manual__2023-06-15T15:04:33.146896+00:00', '--job-id', '438', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpg_nbz3xd']
+[2023-06-15T15:04:57.399+0000] {standard_task_runner.py:83} INFO - Job 438: Subtask download_file
+[2023-06-15T15:04:57.536+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_file manual__2023-06-15T15:04:33.146896+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T15:04:57.656+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T15:04:33.146896+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T15:04:33.146896+00:00
+[2023-06-15T15:04:57.659+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T15:04:57.664+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        cd /opt/*** &&\n        cd airline-delay-analysis &&\n        kaggle datasets download -d sherrytp/airline-delay-analysis\n        ']
+[2023-06-15T15:04:57.696+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T15:05:00.066+0000] {subprocess.py:93} INFO - airline-delay-analysis.zip: Skipping, found more recently modified local copy (use --force to force download)
+[2023-06-15T15:05:00.205+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-15T15:05:00.251+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=download_file, execution_date=20230615T150433, start_date=20230615T150457, end_date=20230615T150500
+[2023-06-15T15:05:00.324+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T15:05:00.353+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

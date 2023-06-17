@@ -1,0 +1,24 @@
+[2023-06-15T15:42:35.064+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T15:37:16.758500+00:00 [queued]>
+[2023-06-15T15:42:35.080+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T15:37:16.758500+00:00 [queued]>
+[2023-06-15T15:42:35.081+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:42:35.082+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T15:42:35.083+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:42:35.110+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2023-06-15 15:37:16.758500+00:00
+[2023-06-15T15:42:35.146+0000] {standard_task_runner.py:55} INFO - Started process 27566 to run task
+[2023-06-15T15:42:35.151+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'format_to_parquet_task', 'manual__2023-06-15T15:37:16.758500+00:00', '--job-id', '440', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp1dvm2h8g']
+[2023-06-15T15:42:35.154+0000] {standard_task_runner.py:83} INFO - Job 440: Subtask format_to_parquet_task
+[2023-06-15T15:42:35.307+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task manual__2023-06-15T15:37:16.758500+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T15:42:35.422+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T15:37:16.758500+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T15:37:16.758500+00:00
+[2023-06-15T15:42:35.427+0000] {data_ingestion_gcs_dag.py:28} ERROR - Can only accept source files in CSV format, for the moment
+[2023-06-15T15:42:35.427+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-06-15T15:42:35.443+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=format_to_parquet_task, execution_date=20230615T153716, start_date=20230615T154235, end_date=20230615T154235
+[2023-06-15T15:42:35.485+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T15:42:35.521+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

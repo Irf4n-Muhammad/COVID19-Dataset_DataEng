@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    #For bigquery:
+    database: prime-byway-387902
+    schema: project1_data
+
+    # loaded_at_field: record_loaded_at
+    tables:
+      - name: country_wise_latest
+      - name: covid_19_clean_complete
+      - name: day_wise
+      - name: full_grouped
+      - name: usa_country_wise
+      - name: woldometer_data

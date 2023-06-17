@@ -1,0 +1,194 @@
+[2023-06-15T00:22:35.788+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_kaggle_dataset_task scheduled__2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15T00:22:35.802+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_kaggle_dataset_task scheduled__2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15T00:22:35.803+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T00:22:35.804+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T00:22:35.805+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T00:22:35.830+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): download_kaggle_dataset_task> on 2023-06-14 00:00:00+00:00
+[2023-06-15T00:22:35.846+0000] {standard_task_runner.py:55} INFO - Started process 6680 to run task
+[2023-06-15T00:22:35.849+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_kaggle_dataset_task', 'scheduled__2023-06-14T00:00:00+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpinq1ue46']
+[2023-06-15T00:22:35.851+0000] {standard_task_runner.py:83} INFO - Job 212: Subtask download_kaggle_dataset_task
+[2023-06-15T00:22:35.933+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_kaggle_dataset_task scheduled__2023-06-14T00:00:00+00:00 [running]> on host 570ce802d94a
+[2023-06-15T00:22:36.015+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_kaggle_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-14T00:00:00+00:00
+[2023-06-15T01:17:24.637+0000] {local_task_job.py:196} ERROR - Heartbeat time limit exceeded!
+[2023-06-15T01:17:28.805+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 6680. PIDs of all processes in the group: [6680]
+[2023-06-15T01:17:29.533+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 6680
+[2023-06-15T01:17:29.612+0000] {taskinstance.py:1482} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-06-15T01:17:30.210+0000] {logging_mixin.py:137} WARNING - --- Logging error ---
+[2023-06-15T01:17:31.494+0000] {logging_mixin.py:137} WARNING - Traceback (most recent call last):
+[2023-06-15T01:17:31.514+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/kaggle/api/kaggle_api_extended.py", line 1245, in dataset_download_files
+    with zipfile.ZipFile(outfile) as z:
+[2023-06-15T01:17:31.523+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+[2023-06-15T01:17:31.524+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+[2023-06-15T01:17:31.533+0000] {logging_mixin.py:137} WARNING - zipfile.BadZipFile: File is not a zip file
+[2023-06-15T01:17:32.909+0000] {logging_mixin.py:137} WARNING - 
+During handling of the above exception, another exception occurred:
+[2023-06-15T01:17:32.917+0000] {logging_mixin.py:137} WARNING - Traceback (most recent call last):
+[2023-06-15T01:17:32.923+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1377, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+[2023-06-15T01:17:32.926+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1523, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2023-06-15T01:17:32.934+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1588, in _execute_task
+    result = execute_callable(context=context)
+[2023-06-15T01:17:33.006+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+[2023-06-15T01:17:33.034+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+[2023-06-15T01:17:33.224+0000] {logging_mixin.py:137} WARNING -   File "/opt/***/dags/data_ingestion_gcs_dag.py", line 25, in download_kaggle_dataset
+    api.dataset_download_files(kaggle_dataset, path=dataset_path, unzip=True)
+[2023-06-15T01:17:33.241+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/kaggle/api/kaggle_api_extended.py", line 1250, in dataset_download_files
+    'www.github.com/kaggle/kaggle-api', e)
+[2023-06-15T01:17:33.258+0000] {logging_mixin.py:137} WARNING - ValueError: ('Bad zip file, please report on www.github.com/kaggle/kaggle-api', BadZipFile('File is not a zip file'))
+[2023-06-15T01:17:33.269+0000] {logging_mixin.py:137} WARNING - 
+During handling of the above exception, another exception occurred:
+[2023-06-15T01:17:33.422+0000] {logging_mixin.py:137} WARNING - Traceback (most recent call last):
+[2023-06-15T01:17:33.441+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 1025, in emit
+    msg = self.format(record)
+[2023-06-15T01:17:33.465+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 869, in format
+    return fmt.format(record)
+[2023-06-15T01:17:33.489+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 610, in format
+    record.asctime = self.formatTime(record, self.datefmt)
+[2023-06-15T01:17:33.525+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/log/timezone_aware.py", line 41, in formatTime
+    dt = pendulum.from_timestamp(record.created, tz=pendulum.local_timezone())
+[2023-06-15T01:17:33.780+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/pendulum/__init__.py", line 275, in from_timestamp
+    dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second, dt.microsecond
+[2023-06-15T01:17:33.802+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/pendulum/__init__.py", line 96, in datetime
+    def datetime(
+[2023-06-15T01:17:34.793+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1483, in signal_handler
+    raise AirflowTermSignal("Task received SIGTERM signal")
+[2023-06-15T01:17:34.802+0000] {logging_mixin.py:137} WARNING - ***.exceptions.AirflowTermSignal: Task received SIGTERM signal
+[2023-06-15T01:17:34.816+0000] {logging_mixin.py:137} WARNING - Call stack:
+[2023-06-15T01:17:40.903+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+[2023-06-15T01:17:40.907+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/__main__.py", line 48, in main
+    args.func(args)
+[2023-06-15T01:17:40.909+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/cli_parser.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-06-15T01:17:40.910+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/cli.py", line 108, in wrapper
+    return f(*args, **kwargs)
+[2023-06-15T01:17:40.930+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/celery_command.py", line 200, in worker
+    celery_app.worker_main(options)
+[2023-06-15T01:17:40.935+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/app/base.py", line 391, in worker_main
+    self.start(argv=argv)
+[2023-06-15T01:17:40.968+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/app/base.py", line 371, in start
+    celery.main(args=argv, standalone_mode=False)
+[2023-06-15T01:17:40.988+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2023-06-15T01:17:40.990+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2023-06-15T01:17:40.998+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2023-06-15T01:17:40.999+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2023-06-15T01:17:41.001+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2023-06-15T01:17:41.008+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2023-06-15T01:17:41.100+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2023-06-15T01:17:41.102+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2023-06-15T01:17:41.106+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2023-06-15T01:17:41.154+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2023-06-15T01:17:41.180+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/concurrency/base.py", line 129, in start
+    self.on_start()
+[2023-06-15T01:17:41.182+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 115, in on_start
+    **self.options)
+[2023-06-15T01:17:41.184+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 463, in __init__
+    super().__init__(processes, *args, **kwargs)
+[2023-06-15T01:17:41.191+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+[2023-06-15T01:17:41.198+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 480, in _create_worker_process
+    return super()._create_worker_process(i)
+[2023-06-15T01:17:41.205+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+[2023-06-15T01:17:41.212+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2023-06-15T01:17:41.216+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2023-06-15T01:17:41.219+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2023-06-15T01:17:41.230+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2023-06-15T01:17:41.330+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2023-06-15T01:17:41.335+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2023-06-15T01:17:41.356+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2023-06-15T01:17:41.365+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2023-06-15T01:17:41.371+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/app/trace.py", line 650, in fast_trace_task
+    uuid, args, kwargs, request,
+[2023-06-15T01:17:41.405+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/app/trace.py", line 451, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2023-06-15T01:17:41.411+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/celery/app/trace.py", line 734, in __protected_call__
+    return self.run(*args, **kwargs)
+[2023-06-15T01:17:41.421+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/executors/celery_executor.py", line 96, in execute_command
+    _execute_in_fork(command_to_exec, celery_task_id)
+[2023-06-15T01:17:41.425+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/executors/celery_executor.py", line 130, in _execute_in_fork
+    args.func(args)
+[2023-06-15T01:17:41.442+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/cli_parser.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-06-15T01:17:41.454+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/cli.py", line 108, in wrapper
+    return f(*args, **kwargs)
+[2023-06-15T01:17:41.459+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 395, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+[2023-06-15T01:17:41.461+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 193, in _run_task_by_selected_method
+    _run_task_by_local_task_job(args, ti)
+[2023-06-15T01:17:41.469+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 252, in _run_task_by_local_task_job
+    run_job.run()
+[2023-06-15T01:17:41.481+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/jobs/base_job.py", line 258, in run
+    self._execute()
+[2023-06-15T01:17:41.483+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/jobs/local_task_job.py", line 155, in _execute
+    self.task_runner.start()
+[2023-06-15T01:17:41.486+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/task/task_runner/standard_task_runner.py", line 43, in start
+    self.process = self._start_by_fork()
+[2023-06-15T01:17:41.488+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/task/task_runner/standard_task_runner.py", line 95, in _start_by_fork
+    args.func(args, dag=self.dag)
+[2023-06-15T01:17:41.492+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/cli_parser.py", line 52, in command
+    return func(*args, **kwargs)
+[2023-06-15T01:17:41.520+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/cli.py", line 108, in wrapper
+    return f(*args, **kwargs)
+[2023-06-15T01:17:41.522+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 395, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+[2023-06-15T01:17:41.537+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 195, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+[2023-06-15T01:17:41.542+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/cli/commands/task_command.py", line 272, in _run_raw_task
+    pool=args.pool,
+[2023-06-15T01:17:41.560+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+[2023-06-15T01:17:41.581+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1431, in _run_raw_task
+    self.handle_failure(e, test_mode, context, session=session)
+[2023-06-15T01:17:41.591+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+[2023-06-15T01:17:41.601+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py", line 1775, in handle_failure
+    self.log.error("Task failed with exception", exc_info=(type(error), error, tb))
+[2023-06-15T01:17:41.610+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 1407, in error
+    self._log(ERROR, msg, args, **kwargs)
+[2023-06-15T01:17:41.612+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 1514, in _log
+    self.handle(record)
+[2023-06-15T01:17:41.614+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 1524, in handle
+    self.callHandlers(record)
+[2023-06-15T01:17:41.615+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 1586, in callHandlers
+    hdlr.handle(record)
+[2023-06-15T01:17:41.621+0000] {logging_mixin.py:137} WARNING -   File "/usr/local/lib/python3.7/logging/__init__.py", line 894, in handle
+    self.emit(record)
+[2023-06-15T01:17:41.622+0000] {logging_mixin.py:137} WARNING -   File "/home/***/.local/lib/python3.7/site-packages/***/utils/log/file_task_handler.py", line 80, in emit
+    self.handler.emit(record)
+[2023-06-15T01:17:41.640+0000] {logging_mixin.py:137} WARNING - Message: 'Task failed with exception'
+Arguments: ()
+[2023-06-15T01:17:47.956+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=download_kaggle_dataset_task, execution_date=20230614T000000, start_date=20230615T002235, end_date=20230615T011747
+[2023-06-15T01:17:55.489+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 212 for task download_kaggle_dataset_task (('Bad zip file, please report on www.github.com/kaggle/kaggle-api', BadZipFile('File is not a zip file')); 6680)
+[2023-06-15T01:17:57.434+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=6680, status='terminated', exitcode=1, started='00:22:35') (6680) terminated with exit code 1

@@ -1,0 +1,34 @@
+[2023-06-15T13:11:18.827+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T13:11:05.495588+00:00 [queued]>
+[2023-06-15T13:11:18.842+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T13:11:05.495588+00:00 [queued]>
+[2023-06-15T13:11:18.843+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T13:11:18.844+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T13:11:18.845+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T13:11:18.874+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 13:11:05.495588+00:00
+[2023-06-15T13:11:18.886+0000] {standard_task_runner.py:55} INFO - Started process 21388 to run task
+[2023-06-15T13:11:18.890+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T13:11:05.495588+00:00', '--job-id', '426', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp_7j9jmb9']
+[2023-06-15T13:11:18.892+0000] {standard_task_runner.py:83} INFO - Job 426: Subtask download_dataset_task
+[2023-06-15T13:11:19.001+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T13:11:05.495588+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T13:11:19.131+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T13:11:05.495588+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T13:11:05.495588+00:00
+[2023-06-15T13:11:19.135+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T13:11:19.139+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n            cd /opt/*** &&\n            mkdir data-science-salaries-2023 && \n            cd data-science-salaries-2023 &&\n            kaggle datasets download -d arnabchaki/data-science-salaries-2023 --force && \n            unzip data-science-salaries-2023.zip && \n            rm data-science-salaries-2023.zip\n            ']
+[2023-06-15T13:11:19.188+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T13:11:19.229+0000] {subprocess.py:93} INFO - mkdir: cannot create directory ‘data-science-salaries-2023’: File exists
+[2023-06-15T13:11:19.231+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-15T13:11:19.249+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-15T13:11:19.259+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=download_dataset_task, execution_date=20230615T131105, start_date=20230615T131118, end_date=20230615T131119
+[2023-06-15T13:11:19.290+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 426 for task download_dataset_task (Bash command failed. The command returned a non-zero exit code 1.; 21388)
+[2023-06-15T13:11:19.345+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-06-15T13:11:19.388+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

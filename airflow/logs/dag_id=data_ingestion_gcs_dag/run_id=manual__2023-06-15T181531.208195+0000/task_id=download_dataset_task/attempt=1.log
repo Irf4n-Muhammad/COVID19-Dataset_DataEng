@@ -1,0 +1,30 @@
+[2023-06-15T18:15:45.216+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T18:15:31.208195+00:00 [queued]>
+[2023-06-15T18:15:45.247+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T18:15:31.208195+00:00 [queued]>
+[2023-06-15T18:15:45.248+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T18:15:45.249+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T18:15:45.250+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T18:15:45.281+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 18:15:31.208195+00:00
+[2023-06-15T18:15:45.296+0000] {standard_task_runner.py:55} INFO - Started process 3085 to run task
+[2023-06-15T18:15:45.300+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T18:15:31.208195+00:00', '--job-id', '478', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpodnk5fw5']
+[2023-06-15T18:15:45.303+0000] {standard_task_runner.py:83} INFO - Job 478: Subtask download_dataset_task
+[2023-06-15T18:15:45.424+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T18:15:31.208195+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T18:15:45.554+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T18:15:31.208195+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T18:15:31.208195+00:00
+[2023-06-15T18:15:45.568+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T18:15:45.587+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        cd /opt/*** &&\n        if [ ! -d direct-messaging ]; then\n            mkdir direct-messaging &&\n            cd direct-messaging &&\n            kaggle datasets download -d mkechinov/direct-messaging --force &&\n            unzip direct-messaging.zip && \n            rm direct-messaging.zip\n        fi &&\n        cd direct-messaging &&\n        ls\n        ']
+[2023-06-15T18:15:45.643+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T18:15:45.695+0000] {subprocess.py:93} INFO - campaigns.csv
+[2023-06-15T18:15:45.696+0000] {subprocess.py:93} INFO - holidays.parquet
+[2023-06-15T18:15:45.697+0000] {subprocess.py:93} INFO - messages-demo.csv
+[2023-06-15T18:15:45.698+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-15T18:15:45.739+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=download_dataset_task, execution_date=20230615T181531, start_date=20230615T181545, end_date=20230615T181545
+[2023-06-15T18:15:45.804+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T18:15:45.848+0000] {taskinstance.py:2585} INFO - 1 downstream tasks scheduled from follow-on schedule check

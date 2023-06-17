@@ -1,0 +1,28 @@
+[2023-06-15T11:28:55.216+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T11:28:45.315072+00:00 [queued]>
+[2023-06-15T11:28:55.238+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T11:28:45.315072+00:00 [queued]>
+[2023-06-15T11:28:55.240+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T11:28:55.242+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T11:28:55.243+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T11:28:55.271+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 11:28:45.315072+00:00
+[2023-06-15T11:28:55.293+0000] {standard_task_runner.py:55} INFO - Started process 15621 to run task
+[2023-06-15T11:28:55.299+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T11:28:45.315072+00:00', '--job-id', '380', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpvx80fbz9']
+[2023-06-15T11:28:55.302+0000] {standard_task_runner.py:83} INFO - Job 380: Subtask download_dataset_task
+[2023-06-15T11:28:55.400+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T11:28:45.315072+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T11:28:55.513+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T11:28:45.315072+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T11:28:45.315072+00:00
+[2023-06-15T11:28:55.517+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T11:28:55.546+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'kaggle datasets download -d arnabchaki/data-science-salaries-2023 -p /opt/***']
+[2023-06-15T11:28:55.596+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T11:28:57.238+0000] {subprocess.py:93} INFO - data-science-salaries-2023.zip: Skipping, found more recently modified local copy (use --force to force download)
+[2023-06-15T11:28:57.453+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-15T11:28:57.492+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=download_dataset_task, execution_date=20230615T112845, start_date=20230615T112855, end_date=20230615T112857
+[2023-06-15T11:28:57.563+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T11:28:57.615+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

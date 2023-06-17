@@ -1,0 +1,41 @@
+[2023-06-15T02:25:00.359+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T02:22:36.867563+00:00 [queued]>
+[2023-06-15T02:25:00.384+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T02:22:36.867563+00:00 [queued]>
+[2023-06-15T02:25:00.385+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T02:25:00.386+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T02:25:00.387+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T02:25:00.414+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 02:22:36.867563+00:00
+[2023-06-15T02:25:00.431+0000] {standard_task_runner.py:55} INFO - Started process 12181 to run task
+[2023-06-15T02:25:00.434+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T02:22:36.867563+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpq699b0as']
+[2023-06-15T02:25:00.436+0000] {standard_task_runner.py:83} INFO - Job 255: Subtask download_dataset_task
+[2023-06-15T02:25:00.533+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T02:22:36.867563+00:00 [running]> on host 570ce802d94a
+[2023-06-15T02:25:00.720+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T02:22:36.867563+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T02:22:36.867563+00:00
+[2023-06-15T02:25:00.723+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T02:25:00.726+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'kaggle datasets download -d sherrytp/airline-delay-analysis -p /opt/***/airline-delay-analysis && unzip -o /opt/***/airline-delay-analysis/airline-delay-analysis.zip -d /opt/***/airline-delay-analysis']
+[2023-06-15T02:25:00.748+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T02:25:02.842+0000] {subprocess.py:93} INFO - airline-delay-analysis.zip: Skipping, found more recently modified local copy (use --force to force download)
+[2023-06-15T02:25:03.029+0000] {subprocess.py:93} INFO - Archive:  /opt/***/airline-delay-analysis/airline-delay-analysis.zip
+[2023-06-15T02:25:06.676+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/20.csv
+[2023-06-15T02:25:15.084+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2009.csv
+[2023-06-15T02:25:22.372+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2010.csv
+[2023-06-15T02:25:30.795+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2011.csv
+[2023-06-15T02:25:38.651+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2012.csv
+[2023-06-15T02:25:50.163+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2013.csv
+[2023-06-15T02:25:58.280+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2014.csv
+[2023-06-15T02:26:07.578+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2015.csv
+[2023-06-15T02:26:14.791+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2016.csv
+[2023-06-15T02:26:21.362+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2017.csv
+[2023-06-15T02:26:30.308+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2018.csv
+[2023-06-15T02:26:39.177+0000] {subprocess.py:93} INFO -   inflating: /opt/***/airline-delay-analysis/airline delay analysis/2019.csv
+[2023-06-15T02:26:39.199+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-15T02:26:39.882+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=download_dataset_task, execution_date=20230615T022236, start_date=20230615T022500, end_date=20230615T022639
+[2023-06-15T02:26:40.234+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T02:26:40.738+0000] {taskinstance.py:2585} INFO - 1 downstream tasks scheduled from follow-on schedule check

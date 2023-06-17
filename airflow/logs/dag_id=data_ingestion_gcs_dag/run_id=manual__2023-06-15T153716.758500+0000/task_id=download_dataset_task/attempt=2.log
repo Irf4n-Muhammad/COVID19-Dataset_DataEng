@@ -1,0 +1,32 @@
+[2023-06-15T15:42:39.167+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T15:37:16.758500+00:00 [queued]>
+[2023-06-15T15:42:39.191+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T15:37:16.758500+00:00 [queued]>
+[2023-06-15T15:42:39.192+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:42:39.193+0000] {taskinstance.py:1283} INFO - Starting attempt 2 of 2
+[2023-06-15T15:42:39.194+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T15:42:39.228+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 15:37:16.758500+00:00
+[2023-06-15T15:42:39.256+0000] {standard_task_runner.py:55} INFO - Started process 27580 to run task
+[2023-06-15T15:42:39.317+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T15:37:16.758500+00:00', '--job-id', '441', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpqoo5ehl2']
+[2023-06-15T15:42:39.357+0000] {standard_task_runner.py:83} INFO - Job 441: Subtask download_dataset_task
+[2023-06-15T15:42:39.910+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T15:37:16.758500+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T15:42:40.269+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T15:37:16.758500+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T15:37:16.758500+00:00
+[2023-06-15T15:42:40.272+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T15:42:40.290+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n            cd /opt/*** &&\n            cd airline-delay-analysis &&\n            kaggle datasets download -d sherrytp/airline-delay-analysis --force && \n            unzip airline-delay-analysis.zip && \n            rm airline-delay-analysis.zip\n            ']
+[2023-06-15T15:42:40.321+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T15:42:43.395+0000] {subprocess.py:93} INFO - Downloading airline-delay-analysis.zip to /opt/***/airline-delay-analysis
+[2023-06-15T15:43:00.935+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-06-15T15:43:01.067+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 27580. PIDs of all processes in the group: [27581, 27582, 27580]
+[2023-06-15T15:43:01.081+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 27580
+[2023-06-15T15:43:01.091+0000] {taskinstance.py:1482} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-06-15T15:43:01.125+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2023-06-15T15:43:01.438+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=27582, status='terminated', started='15:42:40') (27582) terminated with exit code None
+[2023-06-15T15:43:01.678+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=27581, status='terminated', started='15:42:40') (27581) terminated with exit code None
+[2023-06-15T15:43:01.696+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=27580, status='terminated', exitcode=0, started='15:42:39') (27580) terminated with exit code 0

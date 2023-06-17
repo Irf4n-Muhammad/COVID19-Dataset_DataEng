@@ -1,0 +1,37 @@
+[2023-06-15T05:21:55.324+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T05:21:52.643589+00:00 [queued]>
+[2023-06-15T05:21:55.340+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T05:21:52.643589+00:00 [queued]>
+[2023-06-15T05:21:55.341+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T05:21:55.343+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T05:21:55.343+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T05:21:55.367+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): download_dataset_task> on 2023-06-15 05:21:52.643589+00:00
+[2023-06-15T05:21:55.379+0000] {standard_task_runner.py:55} INFO - Started process 7359 to run task
+[2023-06-15T05:21:55.382+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_dataset_task', 'manual__2023-06-15T05:21:52.643589+00:00', '--job-id', '300', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_kaggle2.py', '--cfg-path', '/tmp/tmpm9o9o_i5']
+[2023-06-15T05:21:55.384+0000] {standard_task_runner.py:83} INFO - Job 300: Subtask download_dataset_task
+[2023-06-15T05:21:55.471+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_dataset_task manual__2023-06-15T05:21:52.643589+00:00 [running]> on host 7e4a92a12ba6
+[2023-06-15T05:21:55.579+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T05:21:52.643589+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T05:21:52.643589+00:00
+[2023-06-15T05:21:55.584+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T05:21:55.593+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'kaggle datasets download -d sherrytp/airline-delay-analysis -p /opt/***/airline-delay-analysis && unzip /opt/***/airline-delay-analysis/airline-delay-analysis.zip -d /opt/***/airline-delay-analysis']
+[2023-06-15T05:21:55.617+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T05:21:57.169+0000] {subprocess.py:93} INFO - airline-delay-analysis.zip: Skipping, found more recently modified local copy (use --force to force download)
+[2023-06-15T05:21:57.429+0000] {subprocess.py:93} INFO - Archive:  /opt/***/airline-delay-analysis/airline-delay-analysis.zip
+[2023-06-15T05:21:57.434+0000] {subprocess.py:93} INFO - replace /opt/***/airline-delay-analysis/airline delay analysis/20.csv? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+[2023-06-15T05:21:57.435+0000] {subprocess.py:93} INFO - (EOF or read error, treating as "[N]one" ...)
+[2023-06-15T05:21:57.445+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-15T05:21:57.463+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-15T05:21:57.479+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=download_dataset_task, execution_date=20230615T052152, start_date=20230615T052155, end_date=20230615T052157
+[2023-06-15T05:21:57.520+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 300 for task download_dataset_task (Bash command failed. The command returned a non-zero exit code 1.; 7359)
+[2023-06-15T05:21:57.566+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-06-15T05:21:57.616+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

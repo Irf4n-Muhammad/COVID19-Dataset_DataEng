@@ -1,0 +1,31 @@
+[2023-06-15T13:18:37.899+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.list_files manual__2023-06-15T13:18:03.121278+00:00 [queued]>
+[2023-06-15T13:18:37.921+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.list_files manual__2023-06-15T13:18:03.121278+00:00 [queued]>
+[2023-06-15T13:18:37.922+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T13:18:37.923+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-15T13:18:37.924+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15T13:18:37.957+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): list_files> on 2023-06-15 13:18:03.121278+00:00
+[2023-06-15T13:18:37.976+0000] {standard_task_runner.py:55} INFO - Started process 21878 to run task
+[2023-06-15T13:18:37.985+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'list_files', 'manual__2023-06-15T13:18:03.121278+00:00', '--job-id', '435', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp67o_rn4p']
+[2023-06-15T13:18:37.989+0000] {standard_task_runner.py:83} INFO - Job 435: Subtask list_files
+[2023-06-15T13:18:38.166+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.list_files manual__2023-06-15T13:18:03.121278+00:00 [running]> on host 658b05ff6f1a
+[2023-06-15T13:18:38.298+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=list_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T13:18:03.121278+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-15T13:18:03.121278+00:00
+[2023-06-15T13:18:38.301+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-15T13:18:38.305+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'ls -la /opt/***/data-science-salaries-2023/']
+[2023-06-15T13:18:38.327+0000] {subprocess.py:86} INFO - Output:
+[2023-06-15T13:18:38.350+0000] {subprocess.py:93} INFO - total 216
+[2023-06-15T13:18:38.351+0000] {subprocess.py:93} INFO - drwxrwxr-x 2 default root   4096 Jun 15 13:18 .
+[2023-06-15T13:18:38.352+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root   4096 Jun 15 13:08 ..
+[2023-06-15T13:18:38.353+0000] {subprocess.py:93} INFO - -rw-rw-r-- 1 default root 210076 Apr 13 09:55 ds_salaries.csv
+[2023-06-15T13:18:38.354+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-15T13:18:38.394+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=list_files, execution_date=20230615T131803, start_date=20230615T131837, end_date=20230615T131838
+[2023-06-15T13:18:38.440+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-06-15T13:18:38.497+0000] {taskinstance.py:2585} INFO - 1 downstream tasks scheduled from follow-on schedule check

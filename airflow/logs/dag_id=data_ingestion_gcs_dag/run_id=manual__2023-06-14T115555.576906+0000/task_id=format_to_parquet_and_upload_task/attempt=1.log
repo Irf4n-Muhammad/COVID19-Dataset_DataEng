@@ -1,0 +1,34 @@
+[2023-06-14T11:56:50.019+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_and_upload_task manual__2023-06-14T11:55:55.576906+00:00 [queued]>
+[2023-06-14T11:56:50.037+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_to_parquet_and_upload_task manual__2023-06-14T11:55:55.576906+00:00 [queued]>
+[2023-06-14T11:56:50.039+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-14T11:56:50.040+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-06-14T11:56:50.041+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-14T11:56:50.065+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): format_to_parquet_and_upload_task> on 2023-06-14 11:55:55.576906+00:00
+[2023-06-14T11:56:50.084+0000] {standard_task_runner.py:55} INFO - Started process 13285 to run task
+[2023-06-14T11:56:50.089+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'format_to_parquet_and_upload_task', 'manual__2023-06-14T11:55:55.576906+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpdzwkftag']
+[2023-06-14T11:56:50.091+0000] {standard_task_runner.py:83} INFO - Job 170: Subtask format_to_parquet_and_upload_task
+[2023-06-14T11:56:50.215+0000] {task_command.py:388} INFO - Running <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_and_upload_task manual__2023-06-14T11:55:55.576906+00:00 [running]> on host 2adc0c380f97
+[2023-06-14T11:56:50.477+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_and_upload_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-14T11:55:55.576906+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-14T11:55:55.576906+00:00
+[2023-06-14T11:56:50.481+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_ingestion_gcs_dag.py", line 38, in format_to_parquet_and_upload
+    with zipfile.ZipFile(src_file, 'r') as zip_ref:
+  File "/usr/local/lib/python3.7/zipfile.py", line 1240, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/airline-delay-analysis.zip'
+[2023-06-14T11:56:50.525+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=format_to_parquet_and_upload_task, execution_date=20230614T115555, start_date=20230614T115650, end_date=20230614T115650
+[2023-06-14T11:56:50.602+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 170 for task format_to_parquet_and_upload_task ([Errno 2] No such file or directory: '/opt/airflow/airline-delay-analysis.zip'; 13285)
+[2023-06-14T11:56:50.629+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-06-14T11:56:50.676+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check
