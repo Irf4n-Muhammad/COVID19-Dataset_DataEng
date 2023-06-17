@@ -1,0 +1,14 @@
+dbt_test:
+  outputs:
+    dev:
+      dataset: project1_data
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:/Users/muhfa/New folder/terakhir_key.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: prime-byway-387902
+      threads: 4
+      type: bigquery
+  target: dev
