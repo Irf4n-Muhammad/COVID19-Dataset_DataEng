@@ -1,3 +1,0 @@
-apache-airflow-providers-google
-pyarrow
-SQLAlchemy<2.0

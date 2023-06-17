@@ -1,2 +1,0 @@
-[2023-06-15T13:11:12.668+0000] {taskinstance.py:1078} INFO - Dependencies not met for <TaskInstance: data_ingestion_gcs_dag.list_files manual__2023-06-15T13:11:05.495588+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0), upstream_task_ids={'download_dataset_task'}
-[2023-06-15T13:11:12.675+0000] {local_task_job.py:151} INFO - Task is not able to be run
