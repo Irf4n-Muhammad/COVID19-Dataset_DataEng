@@ -1,0 +1,556 @@
+[2023-06-18T01:31:38.363+0000] {processor.py:153} INFO - Started process (PID=82) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:31:38.473+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:31:38.491+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:31:38.490+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:32:09.067+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:32:09.064+0000] {timeout.py:68} ERROR - Process timed out, PID: 82
+[2023-06-18T01:32:09.119+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:32:09.073+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/dag_ingestion_kaggle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_ingestion_kaggle.py", line 15, in <module>
+    from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateExternalTableOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 42, in <module>
+    from airflow.providers.google.cloud.hooks.bigquery import BigQueryHook, BigQueryJob
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 51, in <module>
+    from googleapiclient.discovery import Resource, build
+  File "/home/airflow/.local/lib/python3.7/site-packages/googleapiclient/discovery.py", line 48, in <module>
+    import httplib2
+  File "/home/airflow/.local/lib/python3.7/site-packages/httplib2/__init__.py", line 53, in <module>
+    from . import auth
+  File "/home/airflow/.local/lib/python3.7/site-packages/httplib2/auth.py", line 4, in <module>
+    import pyparsing as pp
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyparsing/__init__.py", line 140, in <module>
+    from .core import __diag__, __compat__
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_ingestion_kaggle.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#reducing-dag-complexity, PID: 82
+[2023-06-18T01:32:09.126+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:32:09.350+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 31.057 seconds
+[2023-06-18T01:32:40.438+0000] {processor.py:153} INFO - Started process (PID=119) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:32:40.458+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:32:40.477+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:32:40.476+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:33:10.669+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:33:10.664+0000] {timeout.py:68} ERROR - Process timed out, PID: 119
+[2023-06-18T01:33:10.753+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:33:10.674+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/dag_ingestion_kaggle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_ingestion_kaggle.py", line 15, in <module>
+    from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateExternalTableOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 43, in <module>
+    from airflow.providers.google.cloud.hooks.gcs import GCSHook, _parse_gcs_url
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/gcs.py", line 37, in <module>
+    from gcloud.aio.storage import Storage
+  File "/home/airflow/.local/lib/python3.7/site-packages/gcloud/aio/storage/__init__.py", line 152, in <module>
+    from gcloud.aio.storage.blob import Blob
+  File "/home/airflow/.local/lib/python3.7/site-packages/gcloud/aio/storage/blob.py", line 19, in <module>
+    from pyasn1_modules.rfc5208 import PrivateKeyInfo
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1364, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_ingestion_kaggle.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#reducing-dag-complexity, PID: 119
+[2023-06-18T01:33:10.755+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:33:10.996+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 30.634 seconds
+[2023-06-18T01:33:42.700+0000] {processor.py:153} INFO - Started process (PID=156) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:33:42.815+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:33:42.837+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:33:42.835+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:33:59.694+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:33:59.997+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:33:59.995+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:34:00.097+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:34:00.097+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:34:00.225+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 18.120 seconds
+[2023-06-18T01:34:31.793+0000] {processor.py:153} INFO - Started process (PID=191) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:34:31.874+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:34:31.886+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:34:31.885+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:34:51.005+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:34:51.360+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:34:51.359+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:34:51.889+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:34:51.889+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:34:52.075+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 20.653 seconds
+[2023-06-18T01:35:22.936+0000] {processor.py:153} INFO - Started process (PID=227) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:35:22.984+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:35:22.992+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:35:22.991+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:35:39.712+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:35:40.400+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:35:40.392+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:35:40.551+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:35:40.551+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:35:40.708+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 17.812 seconds
+[2023-06-18T01:36:12.131+0000] {processor.py:153} INFO - Started process (PID=266) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:36:12.420+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:36:12.489+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:36:12.489+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:36:41.314+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:36:42.213+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:36:42.209+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:36:42.483+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:36:42.483+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:36:42.874+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 30.986 seconds
+[2023-06-18T01:37:14.166+0000] {processor.py:153} INFO - Started process (PID=305) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:37:14.172+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:37:14.188+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:37:14.187+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:37:22.128+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:37:23.044+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:37:23.043+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:37:23.145+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:37:23.145+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:37:23.266+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 9.157 seconds
+[2023-06-18T01:37:53.675+0000] {processor.py:153} INFO - Started process (PID=341) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:37:53.704+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:37:53.706+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:37:53.706+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:38:24.768+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:38:23.896+0000] {timeout.py:68} ERROR - Process timed out, PID: 341
+[2023-06-18T01:38:25.777+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:38:24.800+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/dag_ingestion_kaggle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_ingestion_kaggle.py", line 15, in <module>
+    from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateExternalTableOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 29, in <module>
+    from google.cloud.bigquery import DEFAULT_RETRY, CopyJob, ExtractJob, LoadJob, QueryJob
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/__init__.py", line 35, in <module>
+    from google.cloud.bigquery.client import Client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 61, in <module>
+    from google.cloud.bigquery_storage_v1.services.big_query_read.client import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/__init__.py", line 25, in <module>
+    from google.cloud.bigquery_storage_v1 import client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/client.py", line 26, in <module>
+    from google.cloud.bigquery_storage_v1 import reader
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/reader.py", line 30, in <module>
+    import pandas
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 48, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/generic.py", line 76, in <module>
+    from pandas.core.groupby.groupby import (
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_ingestion_kaggle.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#reducing-dag-complexity, PID: 341
+[2023-06-18T01:38:25.929+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:38:27.054+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 33.423 seconds
+[2023-06-18T01:38:58.668+0000] {processor.py:153} INFO - Started process (PID=380) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:38:58.683+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:38:58.719+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:38:58.718+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:39:17.852+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:39:18.060+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:39:18.057+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:39:18.366+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:39:18.365+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:39:18.564+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 20.154 seconds
+[2023-06-18T01:39:49.572+0000] {processor.py:153} INFO - Started process (PID=422) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:39:49.647+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:39:49.667+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:39:49.666+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:39:59.792+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:40:00.457+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:40:00.456+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:40:00.623+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:40:00.623+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:40:00.738+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 11.502 seconds
+[2023-06-18T01:40:32.040+0000] {processor.py:153} INFO - Started process (PID=458) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:40:32.205+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:40:32.232+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:40:32.232+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:42:00.010+0000] {processor.py:153} INFO - Started process (PID=502) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:42:00.026+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:42:00.097+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:42:00.097+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:42:13.451+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:42:13.682+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:42:13.681+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:42:13.937+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:42:13.936+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:42:14.098+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 14.354 seconds
+[2023-06-18T01:43:05.083+0000] {processor.py:153} INFO - Started process (PID=542) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:43:05.093+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:43:05.096+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:43:05.096+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:43:35.810+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:43:35.744+0000] {timeout.py:68} ERROR - Process timed out, PID: 542
+[2023-06-18T01:43:36.022+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:43:35.818+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/dag_ingestion_kaggle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_ingestion_kaggle.py", line 15, in <module>
+    from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateExternalTableOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 29, in <module>
+    from google.cloud.bigquery import DEFAULT_RETRY, CopyJob, ExtractJob, LoadJob, QueryJob
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/__init__.py", line 35, in <module>
+    from google.cloud.bigquery.client import Client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 61, in <module>
+    from google.cloud.bigquery_storage_v1.services.big_query_read.client import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/__init__.py", line 25, in <module>
+    from google.cloud.bigquery_storage_v1 import client
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/client.py", line 27, in <module>
+    from google.cloud.bigquery_storage_v1.services import big_query_read
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery_storage_v1/services/big_query_read/__init__.py", line 16, in <module>
+    from .client import BigQueryReadClient
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_ingestion_kaggle.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.2/best-practices.html#reducing-dag-complexity, PID: 542
+[2023-06-18T01:43:36.038+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:43:36.622+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 31.633 seconds
+[2023-06-18T01:44:06.886+0000] {processor.py:153} INFO - Started process (PID=585) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:06.889+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:44:06.891+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:06.891+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:08.292+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:08.321+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:08.320+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:44:08.408+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:08.408+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:44:08.491+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.608 seconds
+[2023-06-18T01:44:39.578+0000] {processor.py:153} INFO - Started process (PID=620) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:39.588+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:44:39.590+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:39.589+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:42.600+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:44:42.690+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:42.688+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:44:42.735+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:44:42.735+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:44:42.784+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 3.210 seconds
+[2023-06-18T01:45:13.492+0000] {processor.py:153} INFO - Started process (PID=657) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:13.514+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:45:13.517+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:13.517+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:15.825+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:15.918+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:15.918+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:45:16.000+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:16.000+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:45:16.068+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 2.594 seconds
+[2023-06-18T01:45:46.388+0000] {processor.py:153} INFO - Started process (PID=704) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:46.390+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:45:46.394+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:46.393+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:47.532+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:45:47.567+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:47.564+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:45:47.646+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:45:47.645+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:45:47.734+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.351 seconds
+[2023-06-18T01:46:17.901+0000] {processor.py:153} INFO - Started process (PID=744) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:17.902+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:46:17.904+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:17.904+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:19.303+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:19.488+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:19.487+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:46:19.589+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:19.588+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:46:19.667+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.769 seconds
+[2023-06-18T01:46:50.119+0000] {processor.py:153} INFO - Started process (PID=781) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:50.121+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:46:50.123+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:50.123+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:51.009+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:46:51.040+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:51.040+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:46:51.074+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:46:51.074+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:46:51.106+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.991 seconds
+[2023-06-18T01:47:21.906+0000] {processor.py:153} INFO - Started process (PID=830) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:21.908+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:47:21.909+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:21.909+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:23.299+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:23.317+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:23.316+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:47:23.360+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:23.359+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:47:23.394+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.492 seconds
+[2023-06-18T01:47:54.089+0000] {processor.py:153} INFO - Started process (PID=866) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:54.091+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:47:54.093+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:54.093+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:55.325+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:47:55.453+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:55.451+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:47:55.492+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:47:55.491+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:47:55.536+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.452 seconds
+[2023-06-18T01:48:26.006+0000] {processor.py:153} INFO - Started process (PID=901) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:26.008+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:48:26.010+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:26.010+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:26.918+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:26.944+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:26.943+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:48:26.982+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:26.982+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:48:27.015+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.013 seconds
+[2023-06-18T01:48:57.458+0000] {processor.py:153} INFO - Started process (PID=950) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:57.460+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:48:57.462+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:57.461+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:58.456+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:48:58.476+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:58.472+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:48:58.520+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:48:58.519+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:48:58.564+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.109 seconds
+[2023-06-18T01:49:28.700+0000] {processor.py:153} INFO - Started process (PID=986) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:49:28.702+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:49:28.703+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:49:28.703+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:49:29.576+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:49:29.663+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:49:29.662+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:49:29.699+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:49:29.699+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:49:29.738+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.041 seconds
+[2023-06-18T01:50:00.137+0000] {processor.py:153} INFO - Started process (PID=1022) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:00.140+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:50:00.141+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:00.141+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:00.996+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:01.031+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:01.030+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:50:01.069+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:01.069+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:50:01.103+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.968 seconds
+[2023-06-18T01:50:32.138+0000] {processor.py:153} INFO - Started process (PID=1071) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:32.140+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:50:32.141+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:32.141+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:33.288+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:50:33.305+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:33.304+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:50:33.355+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:50:33.354+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:50:33.401+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.266 seconds
+[2023-06-18T01:51:03.720+0000] {processor.py:153} INFO - Started process (PID=1108) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:03.722+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:51:03.724+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:03.723+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:04.620+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:04.758+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:04.758+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:51:04.805+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:04.805+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:51:04.844+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.127 seconds
+[2023-06-18T01:51:34.993+0000] {processor.py:153} INFO - Started process (PID=1150) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:34.995+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:51:34.996+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:34.996+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:36.003+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:51:36.034+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:36.033+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:51:36.078+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:51:36.078+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:51:36.110+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.121 seconds
+[2023-06-18T01:52:06.377+0000] {processor.py:153} INFO - Started process (PID=1191) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:06.379+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:52:06.381+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:06.380+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:07.192+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:07.205+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:07.205+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:52:07.236+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:07.235+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:52:07.267+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.893 seconds
+[2023-06-18T01:52:37.487+0000] {processor.py:153} INFO - Started process (PID=1228) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:37.488+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:52:37.489+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:37.489+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:38.332+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:52:38.417+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:38.416+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:52:38.455+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:52:38.455+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:52:38.492+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.008 seconds
+[2023-06-18T01:53:08.764+0000] {processor.py:153} INFO - Started process (PID=1277) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:08.766+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:53:08.767+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:08.767+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:10.203+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:10.275+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:10.275+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:53:10.342+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:10.341+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:53:10.414+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.654 seconds
+[2023-06-18T01:53:40.562+0000] {processor.py:153} INFO - Started process (PID=1314) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:40.563+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:53:40.565+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:40.565+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:41.551+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:53:41.569+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:41.568+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:53:41.604+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:53:41.604+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:53:41.639+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.082 seconds
+[2023-06-18T01:54:11.913+0000] {processor.py:153} INFO - Started process (PID=1350) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:11.915+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:54:11.916+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:11.916+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:13.065+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:13.144+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:13.143+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:54:13.178+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:13.178+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:54:13.224+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.314 seconds
+[2023-06-18T01:54:43.400+0000] {processor.py:153} INFO - Started process (PID=1398) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:43.402+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:54:43.403+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:43.403+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:44.441+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:54:44.467+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:44.466+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:54:44.502+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:54:44.502+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:54:44.530+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.133 seconds
+[2023-06-18T01:55:14.699+0000] {processor.py:153} INFO - Started process (PID=1435) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:14.700+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:55:14.702+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:14.701+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:15.518+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:15.531+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:15.530+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:55:15.569+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:15.568+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:55:15.605+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.908 seconds
+[2023-06-18T01:55:45.794+0000] {processor.py:153} INFO - Started process (PID=1472) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:45.797+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:55:45.806+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:45.806+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:46.816+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:55:46.892+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:46.891+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:55:46.940+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:55:46.940+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:55:46.981+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.191 seconds
+[2023-06-18T01:56:17.566+0000] {processor.py:153} INFO - Started process (PID=1521) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:17.599+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:56:17.619+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:17.619+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:19.391+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:19.425+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:19.423+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:56:19.467+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:19.467+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:56:19.502+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.939 seconds
+[2023-06-18T01:56:50.272+0000] {processor.py:153} INFO - Started process (PID=1554) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:50.274+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:56:50.277+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:50.276+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:51.282+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:56:51.296+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:51.295+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:56:51.335+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:56:51.335+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:56:51.361+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.092 seconds
+[2023-06-18T01:57:21.830+0000] {processor.py:153} INFO - Started process (PID=1591) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:21.838+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:57:21.845+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:21.844+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:26.185+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:26.267+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:26.266+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:57:26.298+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:26.298+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:57:26.333+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 4.529 seconds
+[2023-06-18T01:57:56.661+0000] {processor.py:153} INFO - Started process (PID=1639) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:56.667+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:57:56.668+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:56.668+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:57.569+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:57:57.600+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:57.600+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:57:57.640+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:57:57.640+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:57:57.667+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.009 seconds
+[2023-06-18T01:58:27.730+0000] {processor.py:153} INFO - Started process (PID=1674) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:58:27.732+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:58:27.733+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:58:27.733+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:58:28.630+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:58:28.725+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:58:28.724+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:58:28.762+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:58:28.762+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:58:28.796+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.069 seconds
+[2023-06-18T01:58:59.021+0000] {processor.py:153} INFO - Started process (PID=1713) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:58:59.022+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:58:59.024+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:58:59.024+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:59:00.243+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:59:00.282+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:59:00.278+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:59:00.336+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:59:00.336+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:59:00.388+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.371 seconds
+[2023-06-18T01:59:30.522+0000] {processor.py:153} INFO - Started process (PID=1757) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:59:30.525+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T01:59:30.527+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:59:30.527+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:59:31.462+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T01:59:31.601+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:59:31.600+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T01:59:31.645+0000] {logging_mixin.py:137} INFO - [2023-06-18T01:59:31.645+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T01:59:31.682+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.164 seconds
+[2023-06-18T02:00:01.998+0000] {processor.py:153} INFO - Started process (PID=1798) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:02.000+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:00:02.001+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:02.001+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:04.173+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:04.370+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:04.357+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:00:04.470+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:04.469+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:00:04.584+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 2.590 seconds
+[2023-06-18T02:00:35.219+0000] {processor.py:153} INFO - Started process (PID=1834) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:35.221+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:00:35.223+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:35.223+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:36.178+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:00:36.220+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:36.219+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:00:36.289+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:00:36.288+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:00:36.321+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.106 seconds
+[2023-06-18T02:01:06.956+0000] {processor.py:153} INFO - Started process (PID=1870) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:06.958+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:01:06.959+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:06.959+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:07.771+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:07.866+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:07.866+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:01:07.899+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:07.899+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:01:07.928+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.975 seconds
+[2023-06-18T02:01:38.051+0000] {processor.py:153} INFO - Started process (PID=1906) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:38.053+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:01:38.054+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:38.054+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:38.957+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:01:38.990+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:38.990+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:01:39.031+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:01:39.031+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:01:39.080+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.032 seconds
+[2023-06-18T02:02:09.267+0000] {processor.py:153} INFO - Started process (PID=1950) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:09.269+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:02:09.270+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:09.270+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:10.441+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:10.458+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:10.457+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:02:10.503+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:10.503+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:02:10.535+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.272 seconds
+[2023-06-18T02:02:40.669+0000] {processor.py:153} INFO - Started process (PID=1989) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:40.670+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:02:40.671+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:40.671+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:41.465+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:02:41.530+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:41.529+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:02:41.562+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:02:41.561+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:02:41.591+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 0.924 seconds
+[2023-06-18T02:03:12.050+0000] {processor.py:153} INFO - Started process (PID=2026) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:12.059+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:03:12.061+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:12.061+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:13.052+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:13.084+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:13.084+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:03:13.126+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:13.126+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:03:13.160+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.114 seconds
+[2023-06-18T02:03:43.665+0000] {processor.py:153} INFO - Started process (PID=2062) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:43.669+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T02:03:43.671+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:43.670+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:44.601+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T02:03:44.614+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:44.613+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T02:03:44.647+0000] {logging_mixin.py:137} INFO - [2023-06-18T02:03:44.647+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T02:03:44.675+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.014 seconds
+[2023-06-18T08:46:49.162+0000] {processor.py:153} INFO - Started process (PID=45) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:46:49.167+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:46:49.168+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:46:49.168+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:46:50.782+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:46:50.928+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:46:50.928+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:46:50.974+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:46:50.974+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:46:51.014+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 3.372 seconds
+[2023-06-18T08:47:22.053+0000] {processor.py:153} INFO - Started process (PID=90) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:22.061+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:47:22.065+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:22.065+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:26.419+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:26.451+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:26.451+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:47:26.485+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:26.485+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:47:26.516+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 4.468 seconds
+[2023-06-18T08:47:56.850+0000] {processor.py:153} INFO - Started process (PID=129) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:56.851+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:47:56.853+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:56.853+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:57.695+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:47:57.795+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:57.794+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:47:57.827+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:47:57.827+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:47:57.876+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.030 seconds
+[2023-06-18T08:48:28.563+0000] {processor.py:153} INFO - Started process (PID=179) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:48:28.571+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:48:28.595+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:48:28.595+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:48:32.320+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:48:32.400+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:48:32.399+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:48:32.440+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:48:32.440+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:48:32.475+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 4.052 seconds
+[2023-06-18T08:49:02.997+0000] {processor.py:153} INFO - Started process (PID=215) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:02.998+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:49:03.000+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:03.000+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:03.960+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:04.050+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:04.048+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:49:04.096+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:04.096+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:49:04.149+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 1.156 seconds
+[2023-06-18T08:49:34.396+0000] {processor.py:153} INFO - Started process (PID=251) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:34.398+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:49:34.399+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:34.399+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:36.702+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:49:36.757+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:36.756+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:49:36.798+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:49:36.798+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:49:36.830+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 2.469 seconds
+[2023-06-18T08:50:07.712+0000] {processor.py:153} INFO - Started process (PID=295) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:07.731+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:50:07.755+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:07.755+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:13.332+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:13.628+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:13.627+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:50:14.017+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:14.017+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:50:14.218+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 6.510 seconds
+[2023-06-18T08:50:45.751+0000] {processor.py:153} INFO - Started process (PID=331) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:45.773+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:50:45.814+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:45.814+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:55.327+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:50:55.376+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:55.375+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:50:55.419+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:50:55.419+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:50:55.470+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 10.114 seconds
+[2023-06-18T08:51:26.185+0000] {processor.py:153} INFO - Started process (PID=369) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:51:26.190+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:51:26.193+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:51:26.193+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:51:28.298+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:51:28.579+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:51:28.578+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:51:28.613+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:51:28.613+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:51:28.657+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 2.489 seconds
+[2023-06-18T08:51:59.220+0000] {processor.py:153} INFO - Started process (PID=405) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:51:59.231+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:51:59.234+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:51:59.233+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:52:02.071+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:52:02.121+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:52:02.120+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:52:02.183+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:52:02.182+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:52:02.223+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 3.016 seconds
+[2023-06-18T08:52:33.601+0000] {processor.py:153} INFO - Started process (PID=442) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:52:33.638+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:52:33.653+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:52:33.652+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:53:02.310+0000] {processor.py:753} INFO - DAG(s) dict_keys(['data_ingestion_gcs_dag']) retrieved from /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:53:02.532+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:53:02.524+0000] {dag.py:2693} INFO - Sync 1 DAGs
+[2023-06-18T08:53:02.621+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:53:02.620+0000] {dag.py:3444} INFO - Setting next_dagrun for data_ingestion_gcs_dag to 2023-06-18T00:00:00+00:00, run_after=2023-06-19T00:00:00+00:00
+[2023-06-18T08:53:02.687+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ingestion_kaggle.py took 29.101 seconds
+[2023-06-18T08:53:38.865+0000] {processor.py:153} INFO - Started process (PID=484) to work on /opt/airflow/dags/dag_ingestion_kaggle.py
+[2023-06-18T08:53:38.906+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ingestion_kaggle.py for tasks to queue
+[2023-06-18T08:53:39.037+0000] {logging_mixin.py:137} INFO - [2023-06-18T08:53:39.036+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ingestion_kaggle.py
