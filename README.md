@@ -6,7 +6,7 @@ This project will explore and dissect the data regarding the novel coronavirus (
 
 COVID-19, first identified in Wuhan, the capital city of China's Hubei province, has dramatically altered the global health landscape. People began to develop a form of pneumonia of unknown cause, against which existing vaccines and treatments were ineffective. Furthermore, the virus showed signs of human-to-human transmission, and the rate of infection seemed to increase significantly in mid-January 2020. As of January 30, 2020, approximately 8,243 cases have been confirmed. This situation demands rigorous assessment and continuous monitoring of the pandemic's evolution.
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/c067e3a7-1ef0-49bf-b46d-67273295282e">
+<img width="600" height="400" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/c067e3a7-1ef0-49bf-b46d-67273295282e">
 
 This scanning electron microscope image shows SARS-CoV-2 (yellow)—also known as 2019-nCoV, the virus that causes COVID-19—isolated from a patient in the U.S., emerging from the surface of cells (blue/pink) cultured in the lab.
 
