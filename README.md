@@ -41,7 +41,8 @@ The choosen technologies is variative and depends on the case and condition. The
 - Google Data Studio
 
 ## 4. Data Architecture:
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/6f76020a-5b27-4935-9878-af6bd7d388b3">
+<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/17f49dd3-604f-496e-9ea6-63ea6004deac">
+
 
 
 ## 5. Data Description:
