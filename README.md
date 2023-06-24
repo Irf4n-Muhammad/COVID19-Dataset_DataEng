@@ -8,13 +8,12 @@ This project will explore and dissect the data regarding the novel coronavirus (
 3. [Technologies](#3-technologies)
 4. [Data Architecture](#4-data-architecture)
 5. [Data Description](#5-data-description)  
-6. [Set Up the Environment](#setuptheenvironment)  
-   1. [Google Cloud Platform](#googlecloudplatform)  
-   2. [Terraform](#terraform)
-
-[](#)
-[](#)
-[](#)
+6. [Set Up the Environment](#6-set-up-the-environment)  
+   1. [Google Cloud Platform](#61-google-cloud-platform)  
+   2. [Terraform](#62-terraform)
+7. [Airflow](#7-airflow)
+8. [DBT](#8-dbt)
+9. [Google Data Studio](#9-google-data-studio)
 
 ## 1. Description of the Problem:
 
