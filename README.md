@@ -2,6 +2,20 @@
 
 This project will explore and dissect the data regarding the novel coronavirus (2019-nCoV) from various health organizations. The aim is to answer a series of critical questions and assess the progression of the pandemic over a specified period of time.
 
+## List of Contents:
+1. [Description of the Problem](#1-description-of-the-problem)
+2. [Objective](#2-objective)
+3. [Technologies](#3-technologies)
+4. [Data Architecture](#4-data-architecture)
+5. [Data Description](#5-data-description)  
+6. [Set Up the Environment](#setuptheenvironment)  
+   1. [Google Cloud Platform](#googlecloudplatform)  
+   2. [Terraform](#terraform)
+
+[](#)
+[](#)
+[](#)
+
 ## 1. Description of the Problem:
 
 COVID-19, first identified in Wuhan, the capital city of China's Hubei province, has dramatically altered the global health landscape. People began to develop a form of pneumonia of unknown cause, against which existing vaccines and treatments were ineffective. Furthermore, the virus showed signs of human-to-human transmission, and the rate of infection seemed to increase significantly in mid-January 2020. As of January 30, 2020, approximately 8,243 cases have been confirmed. This situation demands rigorous assessment and continuous monitoring of the pandemic's evolution.
