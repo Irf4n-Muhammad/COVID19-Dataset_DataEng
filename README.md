@@ -111,13 +111,13 @@ Airflow is a tool to help the data engineer to monitor the ingesting data proces
 7. Run the docker-compose build in directory that has docker-compose.yaml and Dockerfile
 8. Run the docker-compose up airflow-init to initialize the airflow
 9. Run the docker-compose up, wait until all the image has settled
-10. Open the search engine (google, bing, etc) and open the web ( localhost:8080 )
+10. Open the search engine (google, bing, etc) and open the web ( localhost:8080 )    
 11. Wait until the loading ended
 12. Sign in the airflow using the password and username that you set before (in docker-compose.yaml)
 13. Choose the DAG file that you want to run
 14. Trigger the DAG
-15. If all task has dark green color (which means succeed), then please check your gcs bucket or bigquery (only if your DAG file has a task sending the file to the bgquery)
-16. If there is an error, then click the square task and click log button to see what's the message giving to you the error information
+14. If all task has dark green color (which means succeed), then please check your gcs bucket or bigquery (only if your DAG file has a task sending the file to the bgquery)
+15. If there is an error, then click the square task and click log button to see what's the message giving to you the error information
     There are several thing that I ever experienced that cause an error:
     1. Airflow version is too low - Solution = Set the latest version in your Dockerfile and when you run the docker-compose build
     2. DAG issue - Solution = Since it would be very specific, so please check the log to see what's error there
