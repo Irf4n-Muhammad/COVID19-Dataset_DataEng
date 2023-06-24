@@ -72,8 +72,6 @@ You gonna need some tools:
 
 ### 6.1 Google Cloud Platform:
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5424e67f-d94a-45fa-8ab9-ac706aeddfad">
-
 In this chapter, we will set up several things you need to set up your firest google cloud platform accout before ready to be used
 
 1. Create the new project (you can use the old project, if you think it's fine)
@@ -83,8 +81,6 @@ In this chapter, we will set up several things you need to set up your firest go
 5. Create the new dataset (optional, due to you can make it along the process)
 
 ### 6.2 Terraform:
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/2faa8507-d149-4bc5-889d-9381c84f21be">
 
 The terraform will help us to make the stable and organizable environment for our google cloud and it's very easy to monitor since we only use python file to control. You can even share it to other team member if you work in group, so you all can assure using the same environment set up.
 
@@ -97,8 +93,6 @@ The terraform will help us to make the stable and organizable environment for ou
    4. terraform apply = run and make the update
 
 ## 7. Airflow:
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/0b299387-a421-49b7-aa4c-97c7816b37a9">
 
 Airflow is a tool to help the data engineer to monitor the ingesting data process. We can create the workflow by our own using python file and we can edit as like as we want. Here are some sets up to run the Airflow:
 
@@ -125,8 +119,6 @@ Airflow is a tool to help the data engineer to monitor the ingesting data proces
 
 ## 8. DBT:
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/6104b129-366d-47c2-a3cb-7cda8357ac34">
-
 DBT is the tool that you can transform your data using sql command. It's very simple and you can even create the documentation to track the history of the process and the dependencies of each files. To use DBT, you have two option to run it, either using local database or using dbt cloud. Each of them have their own benefits, but I suggest you to use dbt local since it's free.
 
 Here's the way to set up the DBT:
@@ -145,8 +137,6 @@ Here's the way to set up the DBT:
 12. Run the file using ( dbt run ) and check your bigquery table and see if the table has created
 
 ## 9. Google Data Studio:
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5e3bd7a1-eee6-43a8-8912-985be393722e">
 
 It's pretty simple, you can connect your bigquery with google data studio and use the created table to be visualized. Build your dasboard which with the hope, it can answer all the problem solving question clearly.
 
