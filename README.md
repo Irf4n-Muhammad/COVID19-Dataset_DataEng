@@ -1,6 +1,6 @@
 ## Data Engineering Project 1 / COVID-19 Dataset
 
-This project will explore and dissect the data regarding the novel coronavirus (2019-nCoV) from various health organizations. The aim is to answer a series of critical questions and assess the progression of the pandemic over a specified period of time. ayam bakar
+This project will explore and dissect the data regarding the novel coronavirus (2019-nCoV) from various health organizations. The aim is to answer a series of critical questions and assess the progression of the pandemic over a specified period of time.
 
 ## List of Contents:
 1. [Description of the Problem](#1-description-of-the-problem)
